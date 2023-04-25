@@ -1,5 +1,5 @@
 //
-//  SurveyQuestions.swift
+//  AQSurveyQuestions.swift
 //  Autism Self Assessment Adults
 //
 //  Created by Jon Salkin on 3/3/23.
@@ -14,7 +14,7 @@ import Foundation
     // Each question has an answer key to compare to the user's response.
     // The score will increase by 1 if the response matches either answer in the scoringKey
     
-let questionDictionary = [
+let questionDictionaryAQ = [
         1 : "I prefer to do things with others rather than on my own.",
         2 : "I prefer to do things the same way over and over again.",
         3 : "If I try to imagine something, I find it very easy to create a picture in my mind.",
@@ -70,7 +70,7 @@ let questionDictionary = [
 
 // The user response for each question will be compared to the answer values.
 // If the user response matches either answer values, the score will increase by one.
- let answerKeyDictionary = [
+ let answerKeyDictionaryAQ = [
         1 :  "Slightly disagree Definitely disagree" ,
         2 :  "Definitely agree Slightly agree" ,
         3 :  "Slightly disagree Definitely disagree" ,

@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import Charts
 
-class ResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AQResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
             
     //MARK: - IBOutlets
@@ -31,10 +31,10 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         showResults()
-        print(totalScore)
+        print(totalScoreAQ)
         
         // populate resultsDictionary here
-        sortedDates = resultsDictionary.keys.sorted()
+        sortedDates = resultsDictionaryAQ.keys.sorted()
         
         // Set the table view's data source and delegate to this view controller
         tableView.dataSource = self
@@ -50,7 +50,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if resultsDictionary.count > 0 {
+        if resultsDictionaryAQ.count > 0 {
             addBarChart()
             tableView.reloadData()
             
@@ -69,14 +69,14 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     //MARK: - Instance Methods
     
     func showResults() {
-        if totalScore == 0 && resultsDictionary.isEmpty {
+        if totalScoreAQ == 0 && resultsDictionaryAQ.isEmpty {
 //                        resultsLabel.text = "This is the Results page."
             resultsLabel.isHidden = true
             
 //            resultsExitButton.isHidden = true
         } else {
-            addToResultDictionary(from: totalScore)
-            print("Date: Score: \(resultsDictionary)")
+            addToResultDictionary(from: totalScoreAQ)
+            print("Date: Score: \(resultsDictionaryAQ)")
             addBarChart()
         }
     }
@@ -84,7 +84,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     // After each completed assessment, a historical entry is added to the dictionary, resultsDictionary.
     func addToResultDictionary(from totalScore: Int) {
         // Add the survey result to the dictionary with the current date
-        resultsDictionary[Date()] = totalScore
+        resultsDictionaryAQ[Date()] = totalScore
     }
     
     
@@ -104,7 +104,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
             .init(demographic: "Non-A Males", answerCount: 17),
             .init(demographic: "Non-A Females", answerCount: 15),
             .init(demographic: "79.3% Aut.", answerCount: 32),
-            .init(demographic: "You", answerCount: totalScore)
+            .init(demographic: "You", answerCount: totalScoreAQ)
         ]
         
         // Vertical Stack of Chart
@@ -144,7 +144,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     func addBarChart() {
-        resultsLabel.text = "Your Score: \(totalScore)"
+        resultsLabel.text = "Your AQ Score: \(totalScoreAQ)"
         if #available(iOS 16, *) {
             let barChart = BarChart()
             let hostingViewController = UIHostingController(rootView: barChart)
@@ -165,7 +165,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //MARK: - Table and Scroll View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultsDictionary.count
+        return resultsDictionaryAQ.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -191,16 +191,16 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath)
         
-        let sortedKeys = resultsDictionary.keys.sorted(by: >)
+        let sortedKeys = resultsDictionaryAQ.keys.sorted(by: >)
         let date = sortedKeys[indexPath.row]
-        let score = resultsDictionary[date] ?? 0
+        let score = resultsDictionaryAQ[date] ?? 0
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .short
         let formattedDate = dateFormatter.string(from: date)
         
-        cell.textLabel?.text = "\(formattedDate)       Score: \(score) of 50"
+        cell.textLabel?.text = "\(formattedDate)    AQ Score: \(score) of 50"
         return cell
     }
 
@@ -228,7 +228,7 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.deselectRow(at: indexPath, animated: true)
         
         var index = 0
-        for (_, surveyResult) in resultsDictionary {
+        for (_, surveyResult) in resultsDictionaryAQ {
             if index == indexPath.row {
                 // Use the selectedDate to access the corresponding result from the dictionary
                 print("Selected survey result: \(surveyResult)")

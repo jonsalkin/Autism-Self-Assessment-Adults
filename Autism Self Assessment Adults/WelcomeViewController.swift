@@ -11,7 +11,9 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var loginOrRegisterButton: UIButton!
     
-    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

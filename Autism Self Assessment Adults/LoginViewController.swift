@@ -20,7 +20,9 @@ class LoginViewController: UIViewController {
     @IBOutlet var forgotPasswordButton: UIButton!
     
     
-    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
     
     
     //MARK: - VDL

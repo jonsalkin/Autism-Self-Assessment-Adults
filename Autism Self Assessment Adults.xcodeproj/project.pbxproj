@@ -7,33 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C036CC129D39305002AA15B /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C036CC029D39305002AA15B /* Responses.swift */; };
+		2C036CC129D39305002AA15B /* AQResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C036CC029D39305002AA15B /* AQResponses.swift */; };
 		2C80C72F29B288DC0062E43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80C72E29B288DC0062E43A /* AppDelegate.swift */; };
 		2C80C73129B288DC0062E43A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80C73029B288DC0062E43A /* SceneDelegate.swift */; };
-		2C80C73329B288DC0062E43A /* AutismQuotientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80C73229B288DC0062E43A /* AutismQuotientViewController.swift */; };
+		2C80C73329B288DC0062E43A /* AQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80C73229B288DC0062E43A /* AQViewController.swift */; };
 		2C80C73629B288DC0062E43A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C80C73429B288DC0062E43A /* Main.storyboard */; };
 		2C80C73829B288E20062E43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C80C73729B288E20062E43A /* Assets.xcassets */; };
 		2C80C73B29B288E20062E43A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C80C73929B288E20062E43A /* LaunchScreen.storyboard */; };
-		2C80C74329B289280062E43A /* SurveyQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80C74229B289280062E43A /* SurveyQuestions.swift */; };
+		2C80C74329B289280062E43A /* AQSurveyQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C80C74229B289280062E43A /* AQSurveyQuestions.swift */; };
 		2CA58FFA29E5E38500BA0C28 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA58FF929E5E38500BA0C28 /* WelcomeViewController.swift */; };
 		2CA58FFC29E5E78000BA0C28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA58FFB29E5E78000BA0C28 /* LoginViewController.swift */; };
-		2CF8DD2329E5B2BF00084D08 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8DD2229E5B2BF00084D08 /* ResultsViewController.swift */; };
+		2CEB82B729F595AB00E4F5EE /* RBQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82B629F595AB00E4F5EE /* RBQViewController.swift */; };
+		2CEB82B929F595CD00E4F5EE /* RBQSurveyQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82B829F595CD00E4F5EE /* RBQSurveyQuestions.swift */; };
+		2CEB82BB29F595EA00E4F5EE /* RBQResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82BA29F595EA00E4F5EE /* RBQResultsViewController.swift */; };
+		2CEB82BD29F596F100E4F5EE /* RBQResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82BC29F596F100E4F5EE /* RBQResponses.swift */; };
+		2CEB82C129F601E100E4F5EE /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82C029F601E100E4F5EE /* SupportViewController.swift */; };
+		2CEB82C329F62EE700E4F5EE /* AllResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82C229F62EE700E4F5EE /* AllResultsViewController.swift */; };
+		2CF8DD2329E5B2BF00084D08 /* AQResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8DD2229E5B2BF00084D08 /* AQResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C036CC029D39305002AA15B /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		2C036CC029D39305002AA15B /* AQResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQResponses.swift; sourceTree = "<group>"; };
 		2C80C72B29B288DC0062E43A /* Autism Self Assessment Adults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Autism Self Assessment Adults.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C80C72E29B288DC0062E43A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C80C73029B288DC0062E43A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C80C73229B288DC0062E43A /* AutismQuotientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutismQuotientViewController.swift; sourceTree = "<group>"; };
+		2C80C73229B288DC0062E43A /* AQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQViewController.swift; sourceTree = "<group>"; };
 		2C80C73529B288DC0062E43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C80C73729B288E20062E43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C80C73A29B288E20062E43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C80C73C29B288E20062E43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C80C74229B289280062E43A /* SurveyQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestions.swift; sourceTree = "<group>"; };
+		2C80C74229B289280062E43A /* AQSurveyQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQSurveyQuestions.swift; sourceTree = "<group>"; };
 		2CA58FF929E5E38500BA0C28 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2CA58FFB29E5E78000BA0C28 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2CF8DD2229E5B2BF00084D08 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		2CEB82B629F595AB00E4F5EE /* RBQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBQViewController.swift; sourceTree = "<group>"; };
+		2CEB82B829F595CD00E4F5EE /* RBQSurveyQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBQSurveyQuestions.swift; sourceTree = "<group>"; };
+		2CEB82BA29F595EA00E4F5EE /* RBQResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBQResultsViewController.swift; sourceTree = "<group>"; };
+		2CEB82BC29F596F100E4F5EE /* RBQResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBQResponses.swift; sourceTree = "<group>"; };
+		2CEB82C029F601E100E4F5EE /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		2CEB82C229F62EE700E4F5EE /* AllResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsViewController.swift; sourceTree = "<group>"; };
+		2CF8DD2229E5B2BF00084D08 /* AQResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +81,39 @@
 				2C80C72E29B288DC0062E43A /* AppDelegate.swift */,
 				2C80C73029B288DC0062E43A /* SceneDelegate.swift */,
 				2CA58FF929E5E38500BA0C28 /* WelcomeViewController.swift */,
-				2CF8DD2229E5B2BF00084D08 /* ResultsViewController.swift */,
+				2CEB82C229F62EE700E4F5EE /* AllResultsViewController.swift */,
 				2CA58FFB29E5E78000BA0C28 /* LoginViewController.swift */,
-				2C80C73229B288DC0062E43A /* AutismQuotientViewController.swift */,
-				2C80C74229B289280062E43A /* SurveyQuestions.swift */,
-				2C036CC029D39305002AA15B /* Responses.swift */,
+				2CEB82C029F601E100E4F5EE /* SupportViewController.swift */,
+				2CEB82BE29F5970E00E4F5EE /* AQ */,
+				2CEB82BF29F5972A00E4F5EE /* RBQ */,
 				2C80C73429B288DC0062E43A /* Main.storyboard */,
 				2C80C73729B288E20062E43A /* Assets.xcassets */,
 				2C80C73929B288E20062E43A /* LaunchScreen.storyboard */,
 				2C80C73C29B288E20062E43A /* Info.plist */,
 			);
 			path = "Autism Self Assessment Adults";
+			sourceTree = "<group>";
+		};
+		2CEB82BE29F5970E00E4F5EE /* AQ */ = {
+			isa = PBXGroup;
+			children = (
+				2C80C73229B288DC0062E43A /* AQViewController.swift */,
+				2C80C74229B289280062E43A /* AQSurveyQuestions.swift */,
+				2CF8DD2229E5B2BF00084D08 /* AQResultsViewController.swift */,
+				2C036CC029D39305002AA15B /* AQResponses.swift */,
+			);
+			path = AQ;
+			sourceTree = "<group>";
+		};
+		2CEB82BF29F5972A00E4F5EE /* RBQ */ = {
+			isa = PBXGroup;
+			children = (
+				2CEB82B629F595AB00E4F5EE /* RBQViewController.swift */,
+				2CEB82B829F595CD00E4F5EE /* RBQSurveyQuestions.swift */,
+				2CEB82BA29F595EA00E4F5EE /* RBQResultsViewController.swift */,
+				2CEB82BC29F596F100E4F5EE /* RBQResponses.swift */,
+			);
+			path = RBQ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,13 +188,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA58FFC29E5E78000BA0C28 /* LoginViewController.swift in Sources */,
-				2C036CC129D39305002AA15B /* Responses.swift in Sources */,
+				2C036CC129D39305002AA15B /* AQResponses.swift in Sources */,
+				2CEB82C129F601E100E4F5EE /* SupportViewController.swift in Sources */,
 				2CA58FFA29E5E38500BA0C28 /* WelcomeViewController.swift in Sources */,
-				2C80C73329B288DC0062E43A /* AutismQuotientViewController.swift in Sources */,
-				2C80C74329B289280062E43A /* SurveyQuestions.swift in Sources */,
-				2CF8DD2329E5B2BF00084D08 /* ResultsViewController.swift in Sources */,
+				2CEB82B929F595CD00E4F5EE /* RBQSurveyQuestions.swift in Sources */,
+				2C80C73329B288DC0062E43A /* AQViewController.swift in Sources */,
+				2CEB82B729F595AB00E4F5EE /* RBQViewController.swift in Sources */,
+				2C80C74329B289280062E43A /* AQSurveyQuestions.swift in Sources */,
+				2CEB82BD29F596F100E4F5EE /* RBQResponses.swift in Sources */,
+				2CF8DD2329E5B2BF00084D08 /* AQResultsViewController.swift in Sources */,
 				2C80C72F29B288DC0062E43A /* AppDelegate.swift in Sources */,
+				2CEB82C329F62EE700E4F5EE /* AllResultsViewController.swift in Sources */,
 				2C80C73129B288DC0062E43A /* SceneDelegate.swift in Sources */,
+				2CEB82BB29F595EA00E4F5EE /* RBQResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,11 +350,12 @@
 				DEVELOPMENT_TEAM = WCLJH7U85A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Autism Self Assessment Adults/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,9 +363,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "MDC-Swift-Class-1.Autism-Self-Assessment-Adults";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -338,11 +382,12 @@
 				DEVELOPMENT_TEAM = WCLJH7U85A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Autism Self Assessment Adults/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -350,9 +395,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "MDC-Swift-Class-1.Autism-Self-Assessment-Adults";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
