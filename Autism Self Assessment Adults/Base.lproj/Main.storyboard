@@ -228,17 +228,17 @@ Leekam, S, Tandos, J., McConachie, H., Meins, E., Parkinson, K., Wright, C., Tur
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-if-PhU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-if-PhU">
                                 <rect key="frame" x="20" y="44" width="353" height="97"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="Dv4-Hh-dgv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBC-vy-8l2">
-                                <rect key="frame" x="46.666666666666657" y="194" width="299.66666666666674" height="360"/>
+                                <rect key="frame" x="46.666666666666657" y="229" width="299.66666666666674" height="360"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIU-2c-CKZ">
                                         <rect key="frame" x="0.0" y="0.0" width="299.66666666666669" height="75"/>
@@ -335,18 +335,24 @@ Leekam, S, Tandos, J., McConachie, H., Meins, E., Parkinson, K., Wright, C., Tur
                                     <action selector="continueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVp-kK-ngr"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p4o-JL-0mo">
+                                <rect key="frame" x="111" y="629" width="171" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JRt-SB-Kmn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rBC-vy-8l2" firstAttribute="centerX" secondItem="jZh-if-PhU" secondAttribute="centerX" id="13C-U8-OYp"/>
-                            <constraint firstItem="rBC-vy-8l2" firstAttribute="top" secondItem="JRt-SB-Kmn" secondAttribute="top" constant="150" id="9Od-6x-ued"/>
+                            <constraint firstItem="rBC-vy-8l2" firstAttribute="top" secondItem="JRt-SB-Kmn" secondAttribute="top" constant="185" id="9Od-6x-ued"/>
                             <constraint firstItem="jZh-if-PhU" firstAttribute="top" secondItem="JRt-SB-Kmn" secondAttribute="top" id="CI7-SY-sJx"/>
                             <constraint firstItem="jZh-if-PhU" firstAttribute="top" secondItem="JRt-SB-Kmn" secondAttribute="top" id="Fdq-QQ-Jb9"/>
+                            <constraint firstItem="p4o-JL-0mo" firstAttribute="leading" secondItem="DDt-dA-g6K" secondAttribute="leadingMargin" constant="95" id="SyS-wi-WQ2"/>
                             <constraint firstItem="jZh-if-PhU" firstAttribute="centerX" secondItem="DDt-dA-g6K" secondAttribute="centerX" id="V80-yE-SYk"/>
                             <constraint firstItem="rBC-vy-8l2" firstAttribute="centerY" secondItem="DDt-dA-g6K" secondAttribute="centerY" id="Z5Y-76-N50"/>
                             <constraint firstItem="jZh-if-PhU" firstAttribute="leading" secondItem="JRt-SB-Kmn" secondAttribute="leading" constant="20" id="Zes-2T-7h7"/>
                             <constraint firstItem="YOK-gU-LeR" firstAttribute="bottom" secondItem="DDt-dA-g6K" secondAttribute="bottomMargin" id="bZg-9A-WI7"/>
+                            <constraint firstItem="p4o-JL-0mo" firstAttribute="top" secondItem="rBC-vy-8l2" secondAttribute="bottom" constant="40" id="dIt-Uh-h8l"/>
+                            <constraint firstItem="p4o-JL-0mo" firstAttribute="centerX" secondItem="DDt-dA-g6K" secondAttribute="centerX" id="ef6-wY-A15"/>
                             <constraint firstItem="YOK-gU-LeR" firstAttribute="centerX" secondItem="DDt-dA-g6K" secondAttribute="centerX" id="iao-7n-S3r"/>
                         </constraints>
                     </view>
@@ -357,13 +363,14 @@ Leekam, S, Tandos, J., McConachie, H., Meins, E., Parkinson, K., Wright, C., Tur
                         <outlet property="neverOrRarelyButton" destination="zIU-2c-CKZ" id="g0C-fr-Lyo"/>
                         <outlet property="oneOrMoreDailyButton" destination="pmU-8v-8Ve" id="eXF-eC-f4W"/>
                         <outlet property="questionLabel" destination="jZh-if-PhU" id="HB1-Sg-LYP"/>
+                        <outlet property="questionProgressViewRBQ" destination="p4o-JL-0mo" id="7em-LK-FrL"/>
                         <outlet property="thirtyOrMoreDailyButton" destination="scS-Yz-rsV" id="ZlB-PZ-NES"/>
                         <segue destination="Jq3-kl-7ew" kind="show" identifier="segueToResultsPage" id="2dH-Fc-h2H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNj-yB-Suk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-503" y="520"/>
+            <point key="canvasLocation" x="-503.05343511450377" y="519.71830985915494"/>
         </scene>
         <!--AQViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -453,14 +460,19 @@ Leekam, S, Tandos, J., McConachie, H., Meins, E., Parkinson, K., Wright, C., Tur
                                     <action selector="continueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efn-1c-meq"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gTJ-6b-Ozz">
+                                <rect key="frame" x="111" y="594" width="171" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NZC-S7-Tz9" firstAttribute="top" secondItem="mvc-uz-uhp" secondAttribute="bottom" constant="20" id="1B2-02-Z69"/>
                             <constraint firstItem="c4V-d5-bw9" firstAttribute="leading" secondItem="mvc-uz-uhp" secondAttribute="leading" id="CMs-Np-sR0"/>
+                            <constraint firstItem="gTJ-6b-Ozz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nxz-FX-DOS"/>
                             <constraint firstItem="jWk-sW-92Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46.666666666666657" id="Q3j-nu-8jA"/>
                             <constraint firstItem="6Py-zf-qpS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Qps-Kt-yLe"/>
+                            <constraint firstItem="gTJ-6b-Ozz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="95" id="RPI-IH-szl"/>
                             <constraint firstItem="c4V-d5-bw9" firstAttribute="top" secondItem="jWk-sW-92Z" secondAttribute="bottom" constant="20" id="Rnx-qV-mzU"/>
                             <constraint firstItem="mvc-uz-uhp" firstAttribute="top" secondItem="c4V-d5-bw9" secondAttribute="bottom" constant="20" id="Vn7-g3-v0x"/>
                             <constraint firstItem="mvc-uz-uhp" firstAttribute="leading" secondItem="NZC-S7-Tz9" secondAttribute="leading" id="ZpT-4L-5Uf"/>
@@ -470,6 +482,7 @@ Leekam, S, Tandos, J., McConachie, H., Meins, E., Parkinson, K., Wright, C., Tur
                             <constraint firstItem="pfQ-HC-10j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="gmL-ND-4sO"/>
                             <constraint firstItem="mvc-uz-uhp" firstAttribute="centerX" secondItem="NZC-S7-Tz9" secondAttribute="centerX" id="nCZ-Yd-Oe1"/>
                             <constraint firstItem="jWk-sW-92Z" firstAttribute="centerX" secondItem="c4V-d5-bw9" secondAttribute="centerX" id="o84-VA-cuZ"/>
+                            <constraint firstItem="gTJ-6b-Ozz" firstAttribute="top" secondItem="NZC-S7-Tz9" secondAttribute="bottom" constant="40" id="pJZ-B2-Dns"/>
                             <constraint firstItem="jWk-sW-92Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="ptm-yT-17M"/>
                             <constraint firstItem="pfQ-HC-10j" firstAttribute="centerX" secondItem="jWk-sW-92Z" secondAttribute="centerX" id="u2v-7j-EMk"/>
                             <constraint firstItem="NZC-S7-Tz9" firstAttribute="centerX" secondItem="6Py-zf-qpS" secondAttribute="centerX" id="w7P-qz-ItQ"/>
@@ -486,6 +499,7 @@ Leekam, S, Tandos, J., McConachie, H., Meins, E., Parkinson, K., Wright, C., Tur
                         <outlet property="definitelyAgreeButton" destination="jWk-sW-92Z" id="1Bs-f7-OdF"/>
                         <outlet property="definitelyDisagreeButton" destination="NZC-S7-Tz9" id="8R6-Xu-LqC"/>
                         <outlet property="questionLabel" destination="pfQ-HC-10j" id="rhd-KM-8bo"/>
+                        <outlet property="questionProgressViewAQ" destination="gTJ-6b-Ozz" id="jfo-JT-wF3"/>
                         <outlet property="slightlyAgreeButton" destination="c4V-d5-bw9" id="FnB-a8-DkH"/>
                         <outlet property="slightlyDisagreeButton" destination="mvc-uz-uhp" id="7Hq-MU-jX8"/>
                         <segue destination="smE-Tp-KOP" kind="show" identifier="segueToResultsPage" id="7NW-lg-8Em"/>

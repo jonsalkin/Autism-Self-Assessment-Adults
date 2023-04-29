@@ -16,6 +16,7 @@ class AQViewController: UIViewController {
     @IBOutlet var slightlyDisagreeButton: UIButton!
     @IBOutlet var definitelyDisagreeButton: UIButton!
     @IBOutlet var continueButton: UIButton!
+    @IBOutlet var questionProgressViewAQ: UIProgressView!
     
     
     
@@ -125,6 +126,10 @@ class AQViewController: UIViewController {
         resetButtonState(button: slightlyAgreeButton)
         resetButtonState(button: slightlyDisagreeButton)
         resetButtonState(button: definitelyDisagreeButton)
+        
+        let totalProgress = Float(questionNumberIndex) / Float(50)
+        
+        questionProgressViewAQ.setProgress(totalProgress, animated: true)
     }
     
     // Adds user response to a single question into an array. Called on after each of the 50 questions.

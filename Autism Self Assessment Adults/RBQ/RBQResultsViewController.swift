@@ -111,7 +111,7 @@ class RBQResultsViewController: UIViewController, UITableViewDataSource, UITable
         var body: some View {
             
             VStack {
-                Text("Adult Repetitive Behaviors Questionnaire-2 (RBQ2)")
+                Text("Adult Repetitive Behaviors\n Questionnaire-2 (RBQ2)")
                     .fontWeight(.bold)
                 Chart {
                     ForEach(autismData) { datum in

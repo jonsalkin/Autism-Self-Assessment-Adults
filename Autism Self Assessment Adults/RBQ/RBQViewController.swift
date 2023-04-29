@@ -18,7 +18,8 @@ class RBQViewController: UIViewController {
         @IBOutlet var fifteenOrMoreDailyButton: UIButton!
         @IBOutlet var thirtyOrMoreDailyButton: UIButton!
         @IBOutlet var continueButton: UIButton!
-        
+    @IBOutlet var questionProgressViewRBQ: UIProgressView!
+    
         
         
         
@@ -149,6 +150,10 @@ class RBQViewController: UIViewController {
             resetButtonState(button: oneOrMoreDailyButton)
             resetButtonState(button: fifteenOrMoreDailyButton)
             resetButtonState(button: thirtyOrMoreDailyButton)
+            
+            let totalProgress = Float(questionNumberIndex) / Float(20)
+            
+            questionProgressViewRBQ.setProgress(totalProgress, animated: true)
         }
         
      
