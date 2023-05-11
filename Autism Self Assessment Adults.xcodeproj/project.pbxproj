@@ -22,7 +22,7 @@
 		2CEB82BB29F595EA00E4F5EE /* RBQResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82BA29F595EA00E4F5EE /* RBQResultsViewController.swift */; };
 		2CEB82BD29F596F100E4F5EE /* RBQResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82BC29F596F100E4F5EE /* RBQResponses.swift */; };
 		2CEB82C129F601E100E4F5EE /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82C029F601E100E4F5EE /* SupportViewController.swift */; };
-		2CEB82C329F62EE700E4F5EE /* AllResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82C229F62EE700E4F5EE /* AllResultsViewController.swift */; };
+		2CEB82C329F62EE700E4F5EE /* AllResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEB82C229F62EE700E4F5EE /* AllResultsTableViewController.swift */; };
 		2CF8DD2329E5B2BF00084D08 /* AQResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8DD2229E5B2BF00084D08 /* AQResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		2CEB82BA29F595EA00E4F5EE /* RBQResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBQResultsViewController.swift; sourceTree = "<group>"; };
 		2CEB82BC29F596F100E4F5EE /* RBQResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBQResponses.swift; sourceTree = "<group>"; };
 		2CEB82C029F601E100E4F5EE /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
-		2CEB82C229F62EE700E4F5EE /* AllResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsViewController.swift; sourceTree = "<group>"; };
+		2CEB82C229F62EE700E4F5EE /* AllResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsTableViewController.swift; sourceTree = "<group>"; };
 		2CF8DD2229E5B2BF00084D08 /* AQResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +81,7 @@
 				2C80C72E29B288DC0062E43A /* AppDelegate.swift */,
 				2C80C73029B288DC0062E43A /* SceneDelegate.swift */,
 				2CA58FF929E5E38500BA0C28 /* WelcomeViewController.swift */,
-				2CEB82C229F62EE700E4F5EE /* AllResultsViewController.swift */,
+				2CEB82C229F62EE700E4F5EE /* AllResultsTableViewController.swift */,
 				2CA58FFB29E5E78000BA0C28 /* LoginViewController.swift */,
 				2CEB82C029F601E100E4F5EE /* SupportViewController.swift */,
 				2CEB82BE29F5970E00E4F5EE /* AQ */,
@@ -198,7 +198,7 @@
 				2CEB82BD29F596F100E4F5EE /* RBQResponses.swift in Sources */,
 				2CF8DD2329E5B2BF00084D08 /* AQResultsViewController.swift in Sources */,
 				2C80C72F29B288DC0062E43A /* AppDelegate.swift in Sources */,
-				2CEB82C329F62EE700E4F5EE /* AllResultsViewController.swift in Sources */,
+				2CEB82C329F62EE700E4F5EE /* AllResultsTableViewController.swift in Sources */,
 				2C80C73129B288DC0062E43A /* SceneDelegate.swift in Sources */,
 				2CEB82BB29F595EA00E4F5EE /* RBQResultsViewController.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  ResultsViewController.swift
+//  AQResultsViewController.swift
 //  Autism Self Assessment Adults
 //
 //  Created by Jon Salkin on 4/11/23.
@@ -24,17 +24,17 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
 
     var sortedDates: [Date] = []
 
-    
+    var aqSurveyResult: AutismQuotientResponses?
     
     
     //MARK: - VDL
     override func viewDidLoad() {
         super.viewDidLoad()
         showResults()
-        print(totalScoreAQ)
+        print(autismQuotientResponses.totalScoreAQ)
         
         // populate resultsDictionary here
-        sortedDates = resultsDictionaryAQ.keys.sorted()
+        sortedDates = autismQuotientResponses.resultsDictionaryAQ.keys.sorted()
         
         // Set the table view's data source and delegate to this view controller
         tableView.dataSource = self
@@ -50,7 +50,7 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if resultsDictionaryAQ.count > 0 {
+        if autismQuotientResponses.resultsDictionaryAQ.count > 0 {
             addBarChart()
             tableView.reloadData()
             
@@ -69,14 +69,14 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
     //MARK: - Instance Methods
     
     func showResults() {
-        if totalScoreAQ == 0 && resultsDictionaryAQ.isEmpty {
+        if autismQuotientResponses.totalScoreAQ == 0 && autismQuotientResponses.resultsDictionaryAQ.isEmpty {
 //                        resultsLabel.text = "This is the Results page."
             resultsLabel.isHidden = true
             
 //            resultsExitButton.isHidden = true
         } else {
-            addToResultDictionary(from: totalScoreAQ)
-            print("Date: Score: \(resultsDictionaryAQ)")
+            addToResultDictionary(from: autismQuotientResponses.totalScoreAQ)
+            print("Date: Score: \(autismQuotientResponses.resultsDictionaryAQ)")
             addBarChart()
         }
     }
@@ -84,7 +84,7 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
     // After each completed assessment, a historical entry is added to the dictionary, resultsDictionary.
     func addToResultDictionary(from totalScore: Int) {
         // Add the survey result to the dictionary with the current date
-        resultsDictionaryAQ[Date()] = totalScore
+        autismQuotientResponses.resultsDictionaryAQ[Date()] = totalScore
     }
     
     
@@ -104,7 +104,7 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
             .init(demographic: "Non-A Males", answerCount: 17),
             .init(demographic: "Non-A Females", answerCount: 15),
             .init(demographic: "79.3% Aut.", answerCount: 32),
-            .init(demographic: "You", answerCount: totalScoreAQ)
+            .init(demographic: "You", answerCount: autismQuotientResponses.totalScoreAQ)
         ]
         
         // Vertical Stack of Chart
@@ -144,7 +144,7 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     func addBarChart() {
-        resultsLabel.text = "Your AQ Score: \(totalScoreAQ)"
+        resultsLabel.text = "Your AQ Score: \(autismQuotientResponses.totalScoreAQ)"
         if #available(iOS 16, *) {
             let barChart = BarChart()
             let hostingViewController = UIHostingController(rootView: barChart)
@@ -165,7 +165,7 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
     
     //MARK: - Table and Scroll View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultsDictionaryAQ.count
+        return autismQuotientResponses.resultsDictionaryAQ.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -191,9 +191,9 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath)
         
-        let sortedKeys = resultsDictionaryAQ.keys.sorted(by: >)
+        let sortedKeys = autismQuotientResponses.resultsDictionaryAQ.keys.sorted(by: >)
         let date = sortedKeys[indexPath.row]
-        let score = resultsDictionaryAQ[date] ?? 0
+        let score = autismQuotientResponses.resultsDictionaryAQ[date] ?? 0
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
@@ -228,7 +228,7 @@ class AQResultsViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         
         var index = 0
-        for (_, surveyResult) in resultsDictionaryAQ {
+        for (_, surveyResult) in autismQuotientResponses.resultsDictionaryAQ {
             if index == indexPath.row {
                 // Use the selectedDate to access the corresponding result from the dictionary
                 print("Selected survey result: \(surveyResult)")

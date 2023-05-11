@@ -76,14 +76,14 @@ class AQViewController: UIViewController {
     // The control flow will then lead to the final 'else' to store the score in the 'totalScore' variable.
     // A segue to the results page occurs finally.
     @IBAction func continueButtonPressed(_ sender: UIButton) {
-        if questionNumberIndex < 50 {
+        if questionNumberIndex < 5 {
             addToCurrentResponseArray()
             resetUI()
             continueButton.isEnabled = false
             print(questionNumberIndex)
             questionNumberIndex += 1
             displayQuestion()
-        } else if questionNumberIndex == 50 {
+        } else if questionNumberIndex == 5 {
             addToCurrentResponseArray()
             questionNumberIndex += 1
             print(questionNumberIndex)
@@ -91,8 +91,11 @@ class AQViewController: UIViewController {
             resetUI()
             disableButtons()
             questionLabel.text = "Well done.\n\nClick continue to see results."
+            // Can Add 2nd label or UIImage above in VDL
+            // Can Unhide label or UIImage
+            // Display text/image "Well done..."
         } else {
-            totalScoreAQ = scoreResponses()
+            autismQuotientResponses.totalScoreAQ = scoreResponses()
             performSegue(withIdentifier: "segueToResultsPage", sender: sender)
         }
     }
@@ -134,14 +137,14 @@ class AQViewController: UIViewController {
     
     // Adds user response to a single question into an array. Called on after each of the 50 questions.
     func addToCurrentResponseArray() {
-        currentResponsesAQ.insert(userResponse!, at: (questionNumberIndex - 1))
-        print(currentResponsesAQ)
+        autismQuotientResponses.currentResponsesAQ.insert(userResponse!, at: (questionNumberIndex - 1))
+        print(autismQuotientResponses.currentResponsesAQ)
     }
     
     // After all 50 questions have been responded to by the user, the array is emptied for future surveys.
     func resetCurrentResponseArray() {
-        currentResponsesAQ.removeAll()
-        print("Current Responses in Array: \(currentResponsesAQ)")
+        autismQuotientResponses.currentResponsesAQ.removeAll()
+        print("Current Responses in Array: \(autismQuotientResponses.currentResponsesAQ)")
     }
     
     // Pulls a survey question from the question dictionary based on the key: questionNumberIndex.
@@ -156,7 +159,7 @@ class AQViewController: UIViewController {
         var score = 0
         var keyIndex = 1
         
-        for response in currentResponsesAQ {
+        for response in autismQuotientResponses.currentResponsesAQ {
             let lowercasedResponse = response.lowercased()
             
             if let answerKeyAnswer = answerKeyDictionaryAQ[keyIndex]?.lowercased(),
